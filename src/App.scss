@@ -1,0 +1,380 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+body {
+  --Brand-cool-100: #DAE9E7;
+  --Brand-cool-200: #B5D2CF;
+  --Brand-cool-400: #71A9A3;
+  --Brand-cool-500: #2D504C;
+  --Brand-cool-600: #223C39;
+  --Brand-cool-700: #162826;
+
+  #root {
+    background-color: rgba(218, 233, 231, 0.5);
+    height: 100%;
+    min-height: 100vh;
+
+    .MuiContainer-root {
+      height: 100%;
+    }
+  }
+}
+
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.login-submit-button {
+  display: flex;
+  gap: 12px;
+}
+
+header {
+  height: 48px;
+
+  .MuiToolbar-root {
+    min-height: unset;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .MuiBox-root {
+      gap: unset;
+    }
+  }
+}
+
+.leaflet {
+  &-container {
+    height: 100%;
+  }
+
+  &-pane {
+    height: 100%;
+  }
+}
+
+.app-wrapper {
+  background-color: var(--Brand-cool-100) !important;
+  margin-bottom: 32px;
+
+  .nav-link {
+    text-decoration: none;
+    height: 48px;
+
+    &.active {
+      background-color: #ffffff;
+
+      .MuiButtonBase-root {
+        height: 48px;
+        padding: 12px 16px;
+        gap: 8px;
+        color: #345995 !important;
+      }
+    }
+
+    &.logo {
+      background-color: unset;
+    }
+
+    &.logout {
+      background-color: unset;
+      display: flex;
+
+      img {
+        width: 20px;
+      }
+    }
+
+    .app-logo {
+      height: 38px;
+      margin-top: 5px;
+    }
+
+    .MuiButtonBase-root {
+      height: 48px;
+      padding: 12px 16px;
+      gap: 8px;
+      color: var(--Brand-cool-500) !important;
+    }
+  }
+}
+
+.login-wrapper-box,
+.account-details-submit {
+  button {
+    padding: 16px;
+    border-radius: 16px;
+    background: #F2B689;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    color: var(--Brand-cool-700, #162826);
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-transform: none;
+  }
+}
+
+.account-details-wrapper,
+.login-wrapper-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 32px 32px 40px 32px;
+  border-radius: 16px;
+  border: 1px solid var(--Brand-cool-100);
+  box-shadow: 0px 8px 16px 0px rgba(22, 40, 38, 0.15);
+  margin-bottom: 48px;
+}
+
+.login-wrapper {
+  padding-top: 150px;
+}
+
+.account-details {
+  &-wrapper {
+    max-width: 665px;
+    gap: 80px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-fields {
+    display: flex;
+    flex-direction: column;
+
+    &-head {
+      position: relative;
+    }
+
+    &-title {
+      font-family: Raleway !important;
+      font-size: 28px !important;
+      font-style: normal;
+      font-weight: 700 !important;
+      line-height: 34px !important;
+      color: var(--Brand-cool-700);
+      margin-bottom: 40px !important;
+
+      &-services {
+        margin-bottom: 16px !important;
+      }
+    }
+
+    &-subtitle {
+      font-family: Raleway !important;
+      font-size: 17px !important;
+      font-style: normal;
+      font-weight: 600 !important;
+      line-height: 22px !important;
+      color: var(--Brand-cool-600);
+      margin-bottom: 24px !important;
+
+      &-services {
+        margin-bottom: 40px !important;
+      }
+    }
+
+    &-logo {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      position: absolute;
+      right: 0;
+      top: -15px;
+      width: 72px;
+      height: 72px;
+
+      &.disabled {
+        opacity: 0.38;
+        cursor: unset;
+        pointer-events: none;
+      }
+
+      &.map {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        top: unset;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+
+      label {
+        width: 100%;
+
+        .MuiBadge-root,
+        .MuiAvatar-root {
+          width: 100%;
+          height: 100%;
+        }
+
+        .MuiAvatar-root {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+
+        .MuiBadge-badge {
+          display: flex;
+          cursor: pointer;
+          width: 24px;
+          height: 24px;
+          padding: 3px;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 100px;
+          border: 1px solid #000;
+          background: #FFF;
+        }
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-row {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 40px;
+
+      .MuiFormControl-root,
+      .MuiAutocomplete-root {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      &-partner-number,
+      &-number-of-trucks {
+        max-width: 116px;
+      }
+
+      &-phone,
+      &-state {
+        max-width: 200px;
+      }
+    }
+
+    &-table {
+      display: flex;
+
+      &-left {
+        border-radius: 8px;
+        background: rgba(239, 224, 212, 0.25);
+      }
+
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        &:first-child {
+          margin-bottom: 16px;
+        }
+      }
+
+      &-row {
+        display: flex;
+      }
+
+      &-column {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        height: 40px;
+
+        label {
+          margin: 0;
+        }
+
+        &.enabled {
+          width: 328px;
+          justify-content: space-between;
+        }
+
+        .MuiCheckbox-root {
+          &:hover {
+            background-color: #DAE9E7;
+          }
+
+          .MuiSvgIcon-root {
+            fill: #345995;
+          }
+
+          &.Mui-disabled {
+            .MuiSvgIcon-root {
+              fill: currentColor;
+              color: rgba(0, 0, 0, 0.26);
+            }
+          }
+        }
+      }
+
+      &-name {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 16px !important;
+        letter-spacing: 0.5px !important;
+
+        .icon {
+          display: flex;
+          padding: 10px 8px 6px 8px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100px;
+          background: #EFE0D4;
+        }
+      }
+    }
+  }
+
+  &-submit {
+    display: flex;
+    position: fixed;
+    z-index: auto;
+    bottom: 48px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    pointer-events: none;
+
+    &-button-wrapper {
+      width: 100%;
+      max-width: calc(665px + (48px * 2) + (32px * 2));
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    button {
+      pointer-events: all;
+      transform: translateX(100%);
+      gap: 12px;
+    }
+  }
+}
